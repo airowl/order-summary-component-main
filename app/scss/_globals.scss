@@ -1,0 +1,80 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h1{
+    font-size: $font-lg;
+    color: $darkBlue;
+    font-weight: 700;
+}
+
+h4{
+    font-size: $font-sm;
+    color: $darkBlue;
+}
+
+p{
+    font-size: $font-sm;
+    color: $desaturedBlue;
+    line-height: 1.5;
+    
+}
+
+// helpers
+
+.mg-bottom-md{
+    margin-bottom: 1.875rem;
+}
+
+.mg-bottom-sm{
+    margin-bottom: 1.6875rem;
+
+    @include breakpoints-up(large){
+        margin-bottom: 2.0625rem;
+    }
+}
+
+.pd-left{
+    padding-left: 3.1875rem;
+}
+
+
+// helper-fin
+
+div.container{
+    // border: 1px solid magenta;
+    height: 100vh;
+    background-color: $paleBLue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.container::before{
+    content: url(../../images/pattern-background-mobile.svg);
+    position: absolute;
+    top: 0;
+
+    @include breakpoints-up(large){
+        content: url(../../images/pattern-background-desktop.svg);
+    }
+
+
+    }
